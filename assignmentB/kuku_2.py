@@ -6,10 +6,10 @@
 3 6 9 12 15 18 
 4 8 12 16 20 24
 """
-for r in range(1, 10):
-    for c in range(1, 10):
-        print(f"{r*c:4d}", end="")
-    print("\n", end="")
-    
-print("行数を選択してください:")
-print("列数を入力してください:")
+c = int(input("行数を選択してください:"))
+k = int(input("列数を入力してください:"))
+
+for i in range(1, c + 1):
+    for j in range(1, k + 1):
+        print(i * j, end=' ')
+    print()
