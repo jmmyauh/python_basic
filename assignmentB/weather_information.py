@@ -27,10 +27,13 @@ def main():
     
     r = weather_information
     print(r[3]["station"] + "," + r[4]["station"] + "," + r[5]["station"])
-    
+
     # Q3. 福岡県の平均気温を計算してください(14.0となればOK)
-    sum_temp = 0
-    count = 
+    fukuoka = [i for i in r if i["prefecture"] == "福岡県"]
+    temperature = [p["temperature"] for p in fukuoka]
+    acerage = sum(temperature) / len(temperature)
+    print(acerage)
+    
 
 if __name__ == "__main__":
     main()
